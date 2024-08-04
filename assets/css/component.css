@@ -1,0 +1,91 @@
+@import "variables.css";
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: linear-gradient(94.2deg, var(--primary) 0%, var(--secondary) 100%) !important;
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: linear-gradient(-94.2deg, var(--primary) 0%, var(--secondary) 100%) !important;
+}
+
+.btn-outline-primary {
+  border: 2px double transparent !important;
+  background-image:
+    linear-gradient(var(--white), var(--white)),
+    linear-gradient(to right, var(--primary), var(--secondary));
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box;
+
+}
+
+
+.text-gradient {
+  background: -webkit-linear-gradient(var(--secondary) 0%,
+      var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-outline-primary:is(:hover, :focus) {
+  background: linear-gradient(94.2deg, var(--secondary) 0%, var(--primary) 100%) !important;
+}
+
+.btn-outline-primary:is(:hover, :focus) .text-gradient {
+  -webkit-text-fill-color: white;
+}
+
+
+footer {
+  background-color: var(--black-50);
+}
+
+footer .footer-links a {
+  color: var(--grey-75);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .footer-links a::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: var(--white);
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  margin-block: auto;
+  transform: translateX(-6px);
+}
+
+footer .footer-links a:is(:hover, :focus) {
+  color: var(--white);
+  transform: translateX(20px);
+}
+
+footer .footer-links a:is(:hover, :focus)::before {
+  width: 12px;
+  height: 1.13px;
+}
+
+.pb-32 {
+  padding-bottom: 32px;
+}
+
+.my-32 {
+  margin-block: 32px;
+}

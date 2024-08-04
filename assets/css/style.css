@@ -1,0 +1,388 @@
+@import "bootstrap.min.css";
+@import "variables.css";
+@import "typography.css";
+@import "component.css";
+
+
+
+body {
+  background-color: var(--white);
+}
+
+
+.navbar-links a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.64px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black-20);
+  padding-block: 0;
+}
+
+.navbar-links a.active {
+  color: var(--primary) !important;
+  font-weight: 700;
+  text-decoration: 2px underline var(--primary);
+  text-underline-offset: 8px;
+}
+
+/****************** Section Title /*******************/
+.section-title h2 {
+  border-radius: 2px;
+  display: inline-block;
+  padding: 4px 8px;
+  background: linear-gradient(94.2deg, rgba(255, 33, 105, 0.1) 0%, rgba(120, 33, 255, 0.1) 100%);
+
+}
+
+.section-title h2,
+.section-title h2 span {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+
+}
+
+.section-title h3 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--black);
+  margin-block: 24px;
+}
+
+
+.how-works,
+.connecting-creators,
+.faq-section {
+  padding-block: 100px;
+}
+
+/****************** Hero Section /*******************/
+.hero-section {
+  height: 600px;
+  background: linear-gradient(94.2deg, var(--primary) 0%, var(--secondary) 100%) !important;
+}
+
+.hero-section h1 {
+  line-height: 60px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.hero-section p {
+  color: var(--grey-50);
+}
+
+/****************** How Works Section /*******************/
+.how-works-content h4 {
+  color: var(--black);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.how-works-step-wrapper {
+  border: 0.5px solid var(--grey-50);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3ss ease-in-out;
+}
+
+.how-works-step-wrapper:hover {
+  box-shadow: 0px 5px 11px 0px #0000000A,
+    0px 19px 19px 0px #00000008,
+    0px 43px 26px 0px #00000005,
+    0px 77px 31px 0px #00000003,
+    0px 120px 34px 0px #00000000;
+}
+
+.how-works-step {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 6px 6px 0px var(--primary-50), -6px 6px 0px var(--primary-50), -6px -6px 0px var(--primary-50), 6px -6px 0px var(--primary-50);
+}
+
+.how-works-step-wrapper h5 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--black);
+}
+
+
+.how-works-image {
+  display: flex !important;
+  justify-content: end;
+  width: fit-content;
+}
+
+.how-works-image::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -24px;
+  right: -24px;
+  background-color: var(--primary-50);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.top-dots {
+  position: absolute;
+  top: -65px;
+  right: -90px;
+  z-index: -1;
+}
+
+.bottom-dots {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  z-index: -1;
+}
+
+.how-works-content-title-line {
+  background: linear-gradient(94.2deg, #FF2169 0%, #7821FF 100%);
+  width: 94px;
+  height: 6px;
+  transform: skew(-45deg);
+}
+
+
+/****************** Connecting Creators Section /*******************/
+.connecting-creators {
+  background-color: rgba(255, 164, 194, 0.1);
+}
+
+.connecting-creators-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  border: 0.5px solid var(--grey-50);
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.connecting-creators-card:hover {
+  box-shadow: 0px 5px 11px 0px #0000000A, 0px 19px 19px 0px #00000008, 0px 43px 26px 0px #00000005, 0px 77px 31px 0px #00000003, 0px 120px 34px 0px #00000000;
+  border: 0.5px solid var(--primary-75);
+}
+
+.connecting-creators-card-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  margin-bottom: 32px;
+}
+
+.connecting-creators-card-content {
+  flex: 1;
+}
+
+.connecting-creators-card-content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.connecting-creators-card-content p {
+  font-size: 14px;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.connecting-creators-card-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary);
+  margin-inline: auto;
+}
+
+/****************** Call to Action Section /*******************/
+.call-to-action {
+  height: 344px;
+  margin-top: 100px;
+  background: linear-gradient(94.2deg, var(--primary) 0%, var(--secondary) 100%) !important;
+  display: flex;
+  align-items: center;
+}
+
+.call-to-action h2 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+
+/****************** FAQ Section /*******************/
+
+.faq-image::before {
+  background-color: #F6F7F9;
+}
+
+.accordion {
+  --bs-accordion-btn-icon: url('../icons/down-arrow.png');
+  --bs-accordion-btn-icon-transform: unset;
+  --bs-accordion-btn-active-icon: url('../icons/up-arrow.png');
+}
+
+.accordion-body {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 0;
+  color: var(--grey);
+}
+
+.accordion-item,
+.accordion-item:not(:first-of-type) {
+  background-color: var(--bs-accordion-bg);
+  border: 0.5px solid var(--grey-50);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-item:has(.accordion-collapse.collapse.show) {
+  background-color: rgba(255, 233, 240, 0.30);
+  border: 0.5px solid var(--primary-75);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+
+.accordion-button {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black) !important;
+}
+
+
+
+@media all and (min-width:768px) and (max-width:991px) {
+  .hero-section h1 {
+    line-height: 48px;
+    font-size: 42px;
+  }
+
+  .section-title h3 {
+    font-size: 32px;
+    margin-block: 16px;
+  }
+
+  .how-works-content h4 {
+    font-size: 18px;
+  }
+
+  .how-works-step-wrapper p,
+  .accordion-body {
+    font-size: 14px;
+  }
+
+  .how-works-step-wrapper h5 {
+    font-size: 16px;
+  }
+
+  .how-works,
+  .connecting-creators,
+  .faq-section {
+    padding-block: 60px;
+  }
+
+  .call-to-action {
+    height: 300px;
+    margin-top: 60px;
+  }
+
+  .call-to-action h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .accordion-button {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width:767px) {
+  .hero-section h1 {
+    line-height: 36px;
+    font-size: 34px;
+  }
+
+  .section-title h3 {
+    font-size: 28px;
+    margin-block: 12px;
+  }
+
+  .how-works-content h4 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .how-works-content-title-line,
+  .how-works-step {
+    margin-inline: auto;
+  }
+
+  .how-works,
+  .connecting-creators,
+  .faq-section {
+    padding-block: 40px;
+  }
+
+  .how-works-step-wrapper p,
+  .accordion-body {
+    font-size: 14px;
+  }
+
+  .connecting-creators-card {
+    padding: 20px;
+  }
+
+  .connecting-creators-card-content h4,
+  .accordion-button {
+    font-size: 16px;
+  }
+
+  .connecting-creators-card-icon {
+    margin-bottom: 16px;
+  }
+
+  .call-to-action h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .call-to-action {
+    height: 250px;
+    margin-top: 40px;
+  }
+
+  .hero-section {
+    height: unset;
+  }
+}
+
+@media all and (max-width:575px) {
+  .how-works-step {
+    margin-inline: auto;
+  }
+}
